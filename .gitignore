@@ -1,0 +1,12 @@
+# Pliki wygenerowane przez CMake
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+
+# Plik wykonywalny
+RPGGame
+
+# Katalogi i pliki wygenerowane przez kompilację
+build/
+
