@@ -4,6 +4,6 @@
 Player::Player(const std::string& name, int level, int health, int attack, int defense, int experience)
     : Character(name, level, health, attack, defense), experience(experience) {}
 
-void Player::attack() {
+void Player::attackAct() {
     std::cout << "Player " << name << " attacks for " << attack << " damage!" << std::endl;
 }

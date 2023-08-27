@@ -1,7 +1,7 @@
 #include "character.h"
 #include "player.h"
 #include "monster.h"
-#include "iuFunctions.h"
+#include "uiFunctions.h"
 
 int main() {
     Player player("Hero", 5, 100, 20, 10, 0);
@@ -9,8 +9,8 @@ int main() {
     
     displayWelcomeMessage();
 
-    player.attack();
-    monster.attack();
+    player.attackAct();
+    monster.attackAct();
 
     displayGameOverMessage();
     return 0;

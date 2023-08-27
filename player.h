@@ -6,7 +6,7 @@
 class Player : public Character {
 public:
     Player(const std::string& name, int level, int health, int attack, int defense, int experience);
-    void attack() override;
+    void attackAct() override;
 
 private:
     int experience;

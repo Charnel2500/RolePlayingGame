@@ -6,7 +6,7 @@
 class Monster : public Character {
 public:
     Monster(const std::string& name, int level, int health, int attack, int defense, int xpReward);
-    void attack() override;
+    void attackAct() override;
 
 private:
     int xpReward;
