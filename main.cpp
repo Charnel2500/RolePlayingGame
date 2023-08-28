@@ -16,10 +16,8 @@ int main() {
     std::cout << "Enter player's name: ";
     std::cin >> playerName;
     
-    std::cout << "Choose your class: ";
-    std::cin >> chosenClass; 
     
-    while (chosenClass >= 1 && chosenClass <= 5) {  
+    do {  
         std::cout << "Choose your class (1 - Crusader, 2 - Berserker, 3 - Hunter, 4 - Druid, 5 - Sorcerer): ";
         std::cin >> chosenClass;
         if (chosenClass == 1)
@@ -34,7 +32,7 @@ int main() {
             chosenPlayer = new Sorcerer(playerName, 1, 0);
         else
             std::cout << "Wrong choice." << std::endl;
-    }
+    } while (chosenClass < 1 || chosenClass > 5);
 
     if (chosenPlayer) { 
         std::cout << "Player " << playerName << " created as " << chosenPlayer->getClassName() << "!" << std::endl;    
