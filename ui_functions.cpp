@@ -1,4 +1,4 @@
-#include "uiFunctions.h"
+#include "ui_functions.h"
 #include <iostream>
 
 void displayWelcomeMessage() {
