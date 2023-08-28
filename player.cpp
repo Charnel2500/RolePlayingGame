@@ -7,3 +7,7 @@ Player::Player(const std::string& name, int level, int health, int attack, int d
 void Player::attackAct() {
     std::cout << "Player " << name << " attacks for " << attack << " damage!" << std::endl;
 }
+
+std::string Player::getClassName() const {
+    return className;
+}
