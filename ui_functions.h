@@ -3,6 +3,8 @@
 
 void displayWelcomeMessage();
 void displayGameOverMessage();
+void classDescription();
+void firstFightGoblinDescription();
 
 #endif // UI_FUNCTIONS_H
 

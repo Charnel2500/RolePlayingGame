@@ -4,6 +4,7 @@
 #include "player_classes.h"
 #include "monster.h"
 #include "ui_functions.h"
+#include "combat_system.h"
 
 int main() {
     displayWelcomeMessage();
@@ -18,6 +19,7 @@ int main() {
     
     
     do {  
+        classDescription();
         std::cout << "Choose your class (1 - Crusader, 2 - Berserker, 3 - Hunter, 4 - Druid, 5 - Sorcerer): ";
         std::cin >> chosenClass;
         if (chosenClass == 1)
@@ -38,11 +40,9 @@ int main() {
         std::cout << "Player " << playerName << " created as " << chosenPlayer->getClassName() << "!" << std::endl;    
     }
     
-    Monster monster("Goblin", 3, 50, 15, 5, 50);
-    
-    monster.attackAct();
-
-    displayGameOverMessage();
+    Monster* goblin = new Monster("Goblin", 3, 50, 15, 5, 50);
+    firstFightGoblinDescription();
+    battle(*chosenPlayer, *goblin);    
     delete chosenPlayer;
     chosenPlayer = nullptr;
     return 0;
