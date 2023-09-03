@@ -5,8 +5,11 @@ Crusader::Crusader(const std::string& name, int level, int experience)
     className = "Crusader";
 }
 
-void Crusader::levelUp(int healthIncrease, int attackIncrease, int defenseIncrease) {
-    Player::levelUp(healthIncrease, attackIncrease, defenseIncrease);
+void Crusader::levelUp() {
+    Player::levelUp();
+    healthIncrease = 12;
+    attackIncrease = 2;
+    defenseIncrease = 4;
 }
 
 Berserker::Berserker(const std::string& name, int level, int experience)
@@ -14,8 +17,11 @@ Berserker::Berserker(const std::string& name, int level, int experience)
     className = "Berserker";
 }
 
-void Berserker::levelUp(int healthIncrease, int attackIncrease, int defenseIncrease) {
-    Player::levelUp(healthIncrease, attackIncrease, defenseIncrease);
+void Berserker::levelUp() {
+    Player::levelUp();
+    healthIncrease = 15;
+    attackIncrease = 3;
+    defenseIncrease = 3;
 }
 
 Hunter::Hunter(const std::string& name, int level, int experience)
@@ -23,8 +29,11 @@ Hunter::Hunter(const std::string& name, int level, int experience)
     className = "Hunter";
 }
 
-void Hunter::levelUp(int healthIncrease, int attackIncrease, int defenseIncrease) {
-    Player::levelUp(healthIncrease, attackIncrease, defenseIncrease);
+void Hunter::levelUp() {
+    Player::levelUp();
+    healthIncrease = 10;
+    attackIncrease = 5;
+    defenseIncrease = 1;
 }
 
 Druid::Druid(const std::string& name, int level, int experience)
@@ -32,8 +41,11 @@ Druid::Druid(const std::string& name, int level, int experience)
     className = "Druid";
 }
 
-void Druid::levelUp(int healthIncrease, int attackIncrease, int defenseIncrease) {
-    Player::levelUp(healthIncrease, attackIncrease, defenseIncrease);
+void Druid::levelUp() {
+    Player::levelUp();
+    healthIncrease = 11;
+    attackIncrease = 4;
+    defenseIncrease = 2;
 }
 
 Sorcerer::Sorcerer(const std::string& name, int level, int experience)
@@ -41,6 +53,9 @@ Sorcerer::Sorcerer(const std::string& name, int level, int experience)
     className = "Sorcerer";
 }
 
-void Sorcerer::levelUp(int healthIncrease, int attackIncrease, int defenseIncrease) {
-    Player::levelUp(healthIncrease, attackIncrease, defenseIncrease);
+void Sorcerer::levelUp() {
+    Player::levelUp();
+    healthIncrease = 6;
+    attackIncrease = 6;
+    defenseIncrease = 1;
 }

@@ -39,15 +39,53 @@ void Player::gainExperience(int monsterXpReward) {
     experience += monsterXpReward;
 }
 
-void Player::levelUp(int healthIncrease, int attackIncrease, int defenseIncrease) {
-    health += healthIncrease;
-    attack += attackIncrease;
-    defense += defenseIncrease;
-    level++;
-    std::cout << "Your character has leveled up, here are the current stats: " << std::endl;
-    std::cout << "Health: " << health << " (+" << healthIncrease << ")." << std::endl;
-    std::cout << "Attack: " << attack << " (+" << attackIncrease << ")." << std::endl;
-    std::cout << "Defense: " << defense << " (+" << defenseIncrease << ")." << std::endl;
-    std::cout << "Level: " << level << " (+1)." << std::endl;
+void Player::levelUp() {
+    if (level >= 5) {
+        return;
+    }
 
+    if (experience >= xpForLevel5) {
+        level++;
+        health += healthIncrease;
+        attack += attackIncrease;
+        defense += defenseIncrease;
+        std::cout << "Your character has leveled up, here are the current stats: " << std::endl;
+        std::cout << "Health: " << health << " (+" << healthIncrease << ")." << std::endl;
+        std::cout << "Attack: " << attack << " (+" << attackIncrease << ")." << std::endl;
+        std::cout << "Defense: " << defense << " (+" << defenseIncrease << ")." << std::endl;
+        std::cout << "Level: " << level << " (+1)." << std::endl;
+    }
+    else if (experience >= xpForLevel4) {
+        level++;
+        health += healthIncrease;
+        attack += attackIncrease;
+        defense += defenseIncrease;
+        std::cout << "Your character has leveled up, here are the current stats: " << std::endl;
+        std::cout << "Health: " << health << " (+" << healthIncrease << ")." << std::endl;
+        std::cout << "Attack: " << attack << " (+" << attackIncrease << ")." << std::endl;
+        std::cout << "Defense: " << defense << " (+" << defenseIncrease << ")." << std::endl;
+        std::cout << "Level: " << level << " (+1)." << std::endl;
+    }
+    else if (experience >= xpForLevel3) {
+        level++;
+        health += healthIncrease;
+        attack += attackIncrease;
+        defense += defenseIncrease;
+        std::cout << "Your character has leveled up, here are the current stats: " << std::endl;
+        std::cout << "Health: " << health << " (+" << healthIncrease << ")." << std::endl;
+        std::cout << "Attack: " << attack << " (+" << attackIncrease << ")." << std::endl;
+        std::cout << "Defense: " << defense << " (+" << defenseIncrease << ")." << std::endl;
+        std::cout << "Level: " << level << " (+1)." << std::endl;
+    }
+    else if (experience >= xpForLevel2) {
+        level++;
+        health += healthIncrease;
+        attack += attackIncrease;
+        defense += defenseIncrease;
+        std::cout << "Your character has leveled up, here are the current stats: " << std::endl;
+        std::cout << "Health: " << health << " (+" << healthIncrease << ")." << std::endl;
+        std::cout << "Attack: " << attack << " (+" << attackIncrease << ")." << std::endl;
+        std::cout << "Defense: " << defense << " (+" << defenseIncrease << ")." << std::endl;
+        std::cout << "Level: " << level << " (+1)." << std::endl;
+    }
 }

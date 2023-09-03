@@ -14,13 +14,20 @@ public:
     void takeDamage(int monsterDamage);
     void resetHealth();
     void gainExperience(int monsterXpReward);
-    virtual void levelUp(int healthIncrease, int attackIncrease, int defenseIncrease);
+    virtual void levelUp();
 
 protected:
     std::string className;
+    int experience;
+    int xpForLevel2;
+    int xpForLevel3;
+    int xpForLevel4;
+    int xpForLevel5;
+    int healthIncrease;
+    int attackIncrease;
+    int defenseIncrease;
 
 private:
-    int experience;
     int baseHealth;
 };
 
