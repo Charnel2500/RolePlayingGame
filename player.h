@@ -10,6 +10,7 @@ public:
     std::string getClassName() const;
     int getAttack() const;
     int getHealth() const;
+    int getDefense() const;
     void takeDamage(int monsterDamage);
     void resetHealth();
     void gainExperience(int monsterXpReward);

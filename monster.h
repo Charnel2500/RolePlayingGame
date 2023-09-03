@@ -9,6 +9,7 @@ public:
     void attackAct() override;
     int getAttack() const;
     int getHealth() const;
+    int getDefense() const;
     void takeDamage(int playerDamage);
     int getXPReward() const;
 

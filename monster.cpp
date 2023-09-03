@@ -6,7 +6,7 @@ Monster::Monster(const std::string& name, int level, int health, int attack, int
 }
 
 void Monster::attackAct() {
-    std::cout << "Monster " << name << " attacks for " << attack << " damage!" << std::endl;
+    std::cout << name << " use basic attack!" << std::endl;
 }
 
 int Monster::getAttack() const {
@@ -15,6 +15,10 @@ int Monster::getAttack() const {
 
 int Monster::getHealth() const {
     return health;
+}
+
+int Monster::getDefense() const {
+    return defense;
 }
 
 void Monster::takeDamage(int playerDamage) {
