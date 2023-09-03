@@ -14,6 +14,7 @@ public:
     void takeDamage(int monsterDamage);
     void resetHealth();
     void gainExperience(int monsterXpReward);
+    virtual void levelUp(int healthIncrease, int attackIncrease, int defenseIncrease);
 
 protected:
     std::string className;
@@ -24,7 +25,4 @@ private:
 };
 
 #endif // PLAYER_H
-
-
-
 

@@ -9,7 +9,6 @@ Player::Player(const std::string& name, int level, int health, int attack, int d
 
 void Player::attackAct() {
     std::cout << "Player " << name << " use basic attack!" << std::endl;
-
 }
 
 std::string Player::getClassName() const {
@@ -38,4 +37,17 @@ void Player::resetHealth() {
 
 void Player::gainExperience(int monsterXpReward) {
     experience += monsterXpReward;
+}
+
+void Player::levelUp(int healthIncrease, int attackIncrease, int defenseIncrease) {
+    health += healthIncrease;
+    attack += attackIncrease;
+    defense += defenseIncrease;
+    level++;
+    std::cout << "Your character has leveled up, here are the current stats: " << std::endl;
+    std::cout << "Health: " << health << " (+" << healthIncrease << ")." << std::endl;
+    std::cout << "Attack: " << attack << " (+" << attackIncrease << ")." << std::endl;
+    std::cout << "Defense: " << defense << " (+" << defenseIncrease << ")." << std::endl;
+    std::cout << "Level: " << level << " (+1)." << std::endl;
+
 }
