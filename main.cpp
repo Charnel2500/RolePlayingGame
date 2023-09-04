@@ -43,20 +43,22 @@ int main() {
     Monster* goblin = new Monster("Goblin", 3, 50, 15, 5, 50);
     firstFightGoblinDescription();
     battle(*chosenPlayer, *goblin);  
+    continueJourney(*chosenPlayer);
     
     Monster* orc = new Monster("Orc", 5, 50, 15, 5, 70);
     fightOrcDescription();
-    battle(*chosenPlayer, *orc);    
+    battle(*chosenPlayer, *orc);   
+    continueJourney(*chosenPlayer);
     
     Monster* troll = new Monster("Troll", 10, 100, 20, 5, 100);
     fightTrollDescription();
     battle(*chosenPlayer, *troll);
+    continueJourney(*chosenPlayer);
     
     Monster* ogre = new Monster("Ogre", 12, 80, 30, 5, 120);
     fightOgreDescription();
     battle(*chosenPlayer, *ogre);
-
-    
+    continueJourney(*chosenPlayer);
     
     delete chosenPlayer;
     chosenPlayer = nullptr;

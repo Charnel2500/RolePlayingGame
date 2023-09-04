@@ -30,5 +30,32 @@ void battle(Player& player, Monster& monster) {
     }
 }
 
-    
+void continueJourney(Player& player) {
+    int choice;
+    do
+    {
+        std::cout << "What do you want to do right now? 1. Show stats. 2. Continue journey." << std::endl;
+        std::cin >> choice;
+        if (choice == 1)
+            showStats(player);
+        else if (choice == 2)
+        {
+            std::cout << "Let's continue journey!" << std::endl;
+            sleep(2);
+            break;
+        }
+        else
+            std::cout << "Wrong choice! Try again. 1. Show stats. 2. Continue journey." << std::endl;
+    } while (choice != 1 || choice != 2);
+}
+
+void showStats(Player& player) {
+    std::cout << "You statistics. Name: " << player.getName() << "." << std::endl;
+    std::cout << "You statistics. Class: " << player.getClassName() << "." << std::endl;
+    std::cout << "You statistics. Level: " << player.getLevel() << "." << std::endl;
+    std::cout << "You statistics. Health: " << player.getHealth() << "." << std::endl;
+    std::cout << "You statistics. Attack: " << player.getAttack() << "." << std::endl;
+    std::cout << "You statistics. Defense: " << player.getDefense() << "." << std::endl;
+    std::cout << "You statistics. XP: " << player.getExperience() << "." << std::endl;
+}
 

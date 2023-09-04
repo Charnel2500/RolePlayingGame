@@ -7,10 +7,13 @@ class Player : public Character {
 public:
     Player(const std::string& name, int level, int health, int attack, int defense, int experience);
     void attackAct() override;
+    std::string getName() const;
     std::string getClassName() const;
+    int getLevel() const;
     int getAttack() const;
     int getHealth() const;
     int getDefense() const;
+    int getExperience() const;
     void takeDamage(int monsterDamage);
     void resetHealth();
     void gainExperience(int monsterXpReward);

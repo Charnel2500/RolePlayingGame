@@ -11,8 +11,16 @@ void Player::attackAct() {
     std::cout << "Player " << name << " use basic attack!" << std::endl;
 }
 
+std::string Player::getName() const {
+    return name;
+}
+
 std::string Player::getClassName() const {
     return className;
+}
+
+int Player::getLevel() const {
+    return level;
 }
 
 int Player::getAttack() const {
@@ -25,6 +33,10 @@ int Player::getHealth() const {
 
 int Player::getDefense() const {
     return defense;
+}
+
+int Player::getExperience() const {
+    return experience;
 }
 
 void Player::takeDamage(int monsterDamage) {
