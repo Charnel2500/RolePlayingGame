@@ -26,8 +26,9 @@ void battle(Player& player, Monster& monster) {
         player.resetHealth();
         player.gainExperience(monster.getXPReward());
         std::cout << "Player won and gain " << monster.getXPReward() << " XP!" << std::endl;
-
+        player.levelUp();
     }
 }
 
+    
 
