@@ -101,3 +101,8 @@ void Player::levelUp() {
         std::cout << "Level: " << level << " (+1)." << std::endl;
     }
 }
+
+void Player::firstSkill(std::string skillName, std::string description) 
+{
+    std::cout << "You use basic skill " <<  skillName << ". " << description << std::endl;
+}
