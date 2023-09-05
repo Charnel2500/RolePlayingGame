@@ -10,15 +10,38 @@ void battle(Player& player, Monster& monster) {
     float monsterDamage = monster.getAttack()-0.5*monster.getDefense();
 
     while (player.getHealth() > 0 && monster.getHealth() > 0) {
-        player.attackAct();
-        monster.takeDamage(playerDamage);
-        std::cout << "Player dealt " << playerDamage << " damage!" << std::endl;
-        sleep(2);
-        
-        monster.attackAct();
-        player.takeDamage(monsterDamage);
-        std::cout << "Monster dealt " << monsterDamage << " damage!" << std::endl;
-        sleep(2);
+        int choice;
+        do {
+            std::cout << "What do you want to do? 1 - Basic attack; 2 - Using a skill." << std::endl;
+            std::cin >> choice;
+            if (choice == 1) 
+            {
+                player.attackAct();
+                monster.takeDamage(playerDamage);
+                std::cout << "Player dealt " << playerDamage << " damage!" << std::endl;
+                sleep(2);
+                
+                monster.attackAct();
+                player.takeDamage(monsterDamage);
+                std::cout << "Monster dealt " << monsterDamage << " damage!" << std::endl;
+                sleep(2);
+            }
+            else if (choice == 2)
+            {
+                player.attackAct();
+                monster.takeDamage(playerDamage);
+                std::cout << "Player dealt " << playerDamage << " damage!" << std::endl;
+                sleep(2);
+                
+                monster.attackAct();
+                player.takeDamage(monsterDamage);
+                std::cout << "Monster dealt " << monsterDamage << " damage!" << std::endl;
+                sleep(2);
+            }
+            else
+                std::cout << "Wrong number! Try again!" << std::endl;
+        } while (choice != 1 || choice != 2);
+
     }
     if (player.getHealth() <= 0) {
         displayGameOverMessage();
