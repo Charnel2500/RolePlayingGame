@@ -12,7 +12,7 @@ void Crusader::levelUp() {
     defenseIncrease = 4;
 }
 
-void Crusader::firstSkill(std::string skillName, std::string description) {
+void Crusader::firstSkill() {
     skillName = "Iron skin";
     description = "\"Iron Skin\" is an ability that grants exceptional defense and resilience to a character, significantly reducing damage taken from attacks and enhancing overall durability. Your defence increase by 75%";
     defense += defense*1.75;
@@ -30,7 +30,7 @@ void Berserker::levelUp() {
     defenseIncrease = 3;
 }
 
-void Berserker::firstSkill(std::string skillName, std::string description) {
+void Berserker::firstSkill() {
     skillName = "Fury";
     description = "\"Fury\" is a skill that boosts a character's attack power when their health falls below a specific threshold, unleashing heightened offensive capabilities in dire situations.";
     attack += attack*1.5;
@@ -48,7 +48,7 @@ void Hunter::levelUp() {
     defenseIncrease = 1;
 }
 
-void Hunter::firstSkill(std::string skillName, std::string description) {
+void Hunter::firstSkill() {
     skillName = "Survival";
     description = "\"Survival\" is an ability that enhances a character's health, attack, and defense attributes, providing increased survivability and combat effectiveness when activated.";
     health += 10;
@@ -68,7 +68,7 @@ void Druid::levelUp() {
     defenseIncrease = 2;
 }
 
-void Druid::firstSkill(std::string skillName, std::string description) {
+void Druid::firstSkill() {
     skillName = "Cure";
     description = "\"Cure\" is a skill that enables healing, restoring a character's health to optimal levels. It serves as a vital ability for regaining lost vitality during challenging situations.";
     health += 50;
@@ -86,7 +86,7 @@ void Sorcerer::levelUp() {
     defenseIncrease = 1;
 }
 
-void Sorcerer::firstSkill(std::string skillName, std::string description) {
+void Sorcerer::firstSkill() {
     skillName = "Death ball";
     description = "\"Death ball\" is a potent offensive skill that conjures a destructive sphere of energy, capable of causing devastating damage to the target. This skill harnesses the very forces of annihilation, making it a formidable and lethal ability in combat.";
     attack += 50;

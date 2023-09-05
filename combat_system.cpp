@@ -28,10 +28,7 @@ void battle(Player& player, Monster& monster) {
             }
             else if (choice == 2)
             {
-                player.attackAct();
-                monster.takeDamage(playerDamage);
-                std::cout << "Player dealt " << playerDamage << " damage!" << std::endl;
-                sleep(2);
+                player.firstSkill(); 
                 
                 monster.attackAct();
                 player.takeDamage(monsterDamage);

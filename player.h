@@ -18,7 +18,7 @@ public:
     void resetHealth();
     void gainExperience(int monsterXpReward);
     virtual void levelUp();
-    virtual void firstSkill(std::string skillName, std::string description);
+    virtual void firstSkill();
 
 protected:
     std::string className;
@@ -30,6 +30,8 @@ protected:
     int healthIncrease;
     int attackIncrease;
     int defenseIncrease;
+    std::string description;
+    std::string skillName;
 
 private:
     int baseHealth;
