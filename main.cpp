@@ -61,6 +61,10 @@ int main() {
     continueJourney(*chosenPlayer);
     
     delete chosenPlayer;
+    delete goblin;
+    delete orc;
+    delete troll;
+    delete ogre;
     chosenPlayer = nullptr;
     return 0;
 }
