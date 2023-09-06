@@ -6,6 +6,8 @@
 class Character {
 public:
     Character(const std::string& name, int level, int health, int attack, int defense);
+    virtual ~Character();
+    
     virtual void attackAct();
 
 protected:
