@@ -6,6 +6,8 @@
 class Player : public Character {
 public:
     Player(const std::string& name, int level, int health, int attack, int defense, int experience);
+    virtual ~Player();
+    
     void attackAct() override;
     std::string getName() const;
     std::string getClassName() const;

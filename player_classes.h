@@ -6,6 +6,8 @@
 class Crusader : public Player {
 public:
     Crusader(const std::string& name, int level, int experience);
+    virtual ~Crusader();
+    
     void levelUp() override;
     void firstSkill() override;
 };
@@ -13,6 +15,8 @@ public:
 class Berserker : public Player {
 public:
     Berserker(const std::string& name, int level, int experience);
+    virtual ~Berserker();
+    
     void levelUp() override;
     void firstSkill() override;
 };
@@ -20,6 +24,8 @@ public:
 class Hunter : public Player {
 public:
     Hunter(const std::string& name, int level, int experience);
+    virtual ~Hunter();
+    
     void levelUp() override;
     void firstSkill() override;
 };
@@ -27,6 +33,8 @@ public:
 class Druid : public Player {
 public:
     Druid(const std::string& name, int level, int experience);
+    virtual ~Druid();
+    
     void levelUp() override;
     void firstSkill() override;
 };
@@ -34,6 +42,8 @@ public:
 class Sorcerer : public Player {
 public:
     Sorcerer(const std::string& name, int level, int experience);
+    virtual ~Sorcerer();
+    
     void levelUp() override;
     void firstSkill() override;
 };

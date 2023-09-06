@@ -6,6 +6,7 @@ Player::Player(const std::string& name, int level, int health, int attack, int d
     className = "Player";
     baseHealth = health;
 }
+Player::~Player() {}
 
 void Player::attackAct() {
     std::cout << "Player " << name << " use basic attack!" << std::endl;

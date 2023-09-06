@@ -6,6 +6,8 @@
 class Monster : public Character {
 public:
     Monster(const std::string& name, int level, int health, int attack, int defense, int xpReward);
+    virtual ~Monster();
+    
     void attackAct() override;
     int getAttack() const;
     int getHealth() const;

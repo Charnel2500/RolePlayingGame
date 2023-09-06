@@ -4,6 +4,7 @@
 Monster::Monster(const std::string& name, int level, int health, int attack, int defense, int xpReward)
     : Character(name, level, health, attack, defense), xpReward(xpReward) {
 }
+Monster::~Monster() {}
 
 void Monster::attackAct() {
     std::cout << name << " use basic attack!" << std::endl;
