@@ -1,4 +1,5 @@
 #include "player_classes.h"
+#include <iostream>
 
 Crusader::Crusader(const std::string& name, int level, int experience)
     : Player(name, level, 120, 25, 10, experience) {
@@ -17,6 +18,7 @@ void Crusader::firstSkill() {
     skillName = "Iron skin";
     description = "\"Iron Skin\" is an ability that grants exceptional defense and resilience to a character, significantly reducing damage taken from attacks and enhancing overall durability. Your defence increase by 75%";
     defense += defense*1.75;
+    std::cout << "Player use skill " << skillName << "\n" <<description << std::endl;
 }
 
 Berserker::Berserker(const std::string& name, int level, int experience)
@@ -36,6 +38,7 @@ void Berserker::firstSkill() {
     skillName = "Fury";
     description = "\"Fury\" is a skill that boosts a character's attack power when their health falls below a specific threshold, unleashing heightened offensive capabilities in dire situations.";
     attack += attack*1.5;
+    std::cout << "Player use skill " << skillName << "\n" <<description << std::endl;
 }
 
 Hunter::Hunter(const std::string& name, int level, int experience)
@@ -57,6 +60,7 @@ void Hunter::firstSkill() {
     health += 10;
     attack += attack*1.2;
     defense += defense*1.2;
+    std::cout << "Player use skill " << skillName << "\n" <<description << std::endl;
 }
 
 Druid::Druid(const std::string& name, int level, int experience)
@@ -76,6 +80,7 @@ void Druid::firstSkill() {
     skillName = "Cure";
     description = "\"Cure\" is a skill that enables healing, restoring a character's health to optimal levels. It serves as a vital ability for regaining lost vitality during challenging situations.";
     health += 50;
+    std::cout << "Player use skill " << skillName << "\n" <<description << std::endl;
 }
 
 Sorcerer::Sorcerer(const std::string& name, int level, int experience)
@@ -95,4 +100,5 @@ void Sorcerer::firstSkill() {
     skillName = "Death ball";
     description = "\"Death ball\" is a potent offensive skill that conjures a destructive sphere of energy, capable of causing devastating damage to the target. This skill harnesses the very forces of annihilation, making it a formidable and lethal ability in combat.";
     attack += 50;
+    std::cout << "Player use skill " << skillName << "\n" <<description << std::endl;
 }
