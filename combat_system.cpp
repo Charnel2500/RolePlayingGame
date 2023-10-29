@@ -14,6 +14,7 @@ void battle(Player& player, Monster& monster) {
         do {
             std::cout << "What do you want to do? 1 - Basic attack; 2 - Using a skill." << std::endl;
             std::cin >> choice;
+            std::cout << player.getHealth() << std::endl;
             if (choice == 1) 
             {
                 player.attackAct();
@@ -22,8 +23,8 @@ void battle(Player& player, Monster& monster) {
                 sleep(2);
                 
                 monster.attackAct();
-                player.takeDamage(monsterDamage);
-                std::cout << "Monster dealt " << monsterDamage << " damage!" << std::endl;
+                int actualDamage = player.takeDamage(monsterDamage);
+                std::cout << "Monster dealt " << actualDamage << " damage!" << std::endl;
                 sleep(2);
             }
             else if (choice == 2)
@@ -31,8 +32,8 @@ void battle(Player& player, Monster& monster) {
                 player.firstSkill(); 
                 
                 monster.attackAct();
-                player.takeDamage(monsterDamage);
-                std::cout << "Monster dealt " << monsterDamage << " damage!" << std::endl;
+                int actualDamage = player.takeDamage(monsterDamage);
+                std::cout << "Monster dealt " << actualDamage << " damage!" << std::endl;
                 sleep(2);
             }
             else
@@ -44,6 +45,9 @@ void battle(Player& player, Monster& monster) {
         displayGameOverMessage();
     } else {
         player.resetHealth();
+        player.resetAttack();
+        player.resetDefense();
+
         player.gainExperience(monster.getXPReward());
         std::cout << "Player won and gain " << monster.getXPReward() << " XP!" << std::endl;
         player.levelUp();

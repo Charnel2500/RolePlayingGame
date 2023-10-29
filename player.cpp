@@ -4,6 +4,8 @@
 Player::Player(const std::string& name, int level, int health, int attack, int defense, int experience)
     : Character(name, level, health, attack, defense), experience(experience) {
     className = "Player";
+    baseAttack = attack;
+    baseDefense = defense;
     baseHealth = health;
 }
 Player::~Player() {}
@@ -40,12 +42,27 @@ int Player::getExperience() const {
     return experience;
 }
 
-void Player::takeDamage(int monsterDamage) {
-    health -= monsterDamage;
+int Player::takeDamage(int monsterDamage) {
+    int actualDamage = monsterDamage - defense;
+    if (actualDamage < 0) {
+        actualDamage = 1;  
+    }
+    health -= actualDamage;
+    return actualDamage;
 }
+
+
 
 void Player::resetHealth() {
     health = baseHealth;
+}
+
+void Player::resetAttack() {
+    attack = baseAttack;
+}
+
+void Player::resetDefense() {
+    defense = baseDefense;
 }
 
 void Player::gainExperience(int monsterXpReward) {
@@ -103,7 +120,3 @@ void Player::levelUp() {
     }
 }
 
-void Player::firstSkill() 
-{
-    std::cout << "You use basic skill " <<  skillName << ". " << description << std::endl;
-}

@@ -16,10 +16,11 @@ void Crusader::levelUp() {
 
 void Crusader::firstSkill() {
     skillName = "Iron skin";
-    description = "\"Iron Skin\" is an ability that grants exceptional defense and resilience to a character, significantly reducing damage taken from attacks and enhancing overall durability. Your defence increase by 75%";
-    defense += defense*1.75;
-    std::cout << "Player use skill " << skillName << "\n" <<description << std::endl;
+    description = "\"Iron Skin\" is an ability that grants exceptional defense and resilience to a character, significantly reducing damage taken from attacks and enhancing overall durability. Your defense increases by 75%.";
+    defense += defense * 0.75; // Zwiększ obronę o 75%
+    std::cout << "Player use skill " << skillName << "\n" << description << std::endl;
 }
+
 
 Berserker::Berserker(const std::string& name, int level, int experience)
     : Player(name, level, 150, 20, 15, experience) {

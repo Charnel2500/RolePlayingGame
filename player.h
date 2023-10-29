@@ -16,11 +16,13 @@ public:
     int getHealth() const;
     int getDefense() const;
     int getExperience() const;
-    void takeDamage(int monsterDamage);
+    int takeDamage(int monsterDamage);
     void resetHealth();
+    void resetAttack();
+    void resetDefense();
     void gainExperience(int monsterXpReward);
     virtual void levelUp();
-    virtual void firstSkill();
+    virtual void firstSkill() {};
 
 protected:
     std::string className;
@@ -34,9 +36,12 @@ protected:
     int defenseIncrease;
     std::string description;
     std::string skillName;
+    int initialDefense;
 
 private:
     int baseHealth;
+    int baseAttack;
+    int baseDefense;
 };
 
 #endif // PLAYER_H
