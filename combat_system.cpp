@@ -12,7 +12,8 @@ void battle(Player& player, Monster& monster) {
     while (player.getHealth() > 0 && monster.getHealth() > 0) {
         int choice;
         do {
-            std::cout << "What do you want to do? 1 - Basic attack; 2 - Using a skill." << std::endl;
+            std::cout << "What do you want to do? 1 - Basic attack; 2 - Using a skill; 3 - Show the information." << std::endl; //add show info for player and monster
+            
             std::cin >> choice;
             std::cout << player.getHealth() << std::endl;
             if (choice == 1) 
@@ -35,6 +36,13 @@ void battle(Player& player, Monster& monster) {
                 int actualDamage = player.takeDamage(monsterDamage);
                 std::cout << "Monster dealt " << actualDamage << " damage!" << std::endl;
                 sleep(2);
+            }
+            else if (choice == 3)
+            {
+                std::cout << "Player information: " << "\n" << "1. Level: " << player.getLevel() << "\n" << "2. Health: " << player.getHealth() << "\n" << "3. Attack: " << player.getAttack() << "\n" << "4. Defense: " << player.getDefense() << "\n" << "5. Experience: " << player.getExperience() << "." << std::endl;
+                sleep(1);
+                std::cout << "Monster information: " << "\n" << "1. Health: " << monster.getHealth() << "\n" << "2. Attack: " << monster.getAttack() << "\n" << "3. Defense: " << monster.getDefense() << "." << std::endl;
+                sleep(1);
             }
             else
                 std::cout << "Wrong number! Try again!" << std::endl;
