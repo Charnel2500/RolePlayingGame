@@ -51,7 +51,9 @@ int Player::takeDamage(int monsterDamage) {
     return actualDamage;
 }
 
-
+int Player::getBaseHealth() const {
+    return baseHealth;
+}
 
 void Player::resetHealth() {
     health = baseHealth;

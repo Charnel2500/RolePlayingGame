@@ -14,6 +14,7 @@ public:
     int getLevel() const;
     int getAttack() const;
     int getHealth() const;
+    int getBaseHealth() const;
     int getDefense() const;
     int getExperience() const;
     int takeDamage(int monsterDamage);

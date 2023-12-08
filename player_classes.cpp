@@ -80,7 +80,12 @@ void Druid::levelUp() {
 void Druid::firstSkill() {
     skillName = "Cure";
     description = "\"Cure\" is a skill that enables healing, restoring a character's health to optimal levels. It serves as a vital ability for regaining lost vitality during challenging situations.";
-    health += 50;
+    int checkBaseHealth = getBaseHealth();
+    std::cout << "Base health equal: " << checkBaseHealth;
+    if ((health) >= checkBaseHealth-50)
+        health = checkBaseHealth;
+    else
+        health += 50;
     std::cout << "Player use skill " << skillName << "\n" <<description << std::endl;
 }
 
